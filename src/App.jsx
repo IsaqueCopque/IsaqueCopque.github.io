@@ -1,6 +1,12 @@
 import './App.css';
-import { MdOutlineArticle } from "react-icons/md";
-import { FaGithub } from "react-icons/fa";
+import { MdOutlineArticle, MdOutlineEmail, MdContactPhone } from "react-icons/md";
+import { FaGithub, FaJava, FaNodeJs, FaReact  } from "react-icons/fa";
+import { SiJavascript, SiSpring, SiPostgresql  } from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
+import { FaMapLocationDot } from "react-icons/fa6";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Navbar = () => (
   <>
@@ -38,7 +44,7 @@ const MainSection = () => (
 const AboutSection = () => (
   <section id="about" 
     style={{backgroundColor: "var(--white)"}}
-    className="flex flex-col gap-2 items-center p-2 rounded-md">
+    className="flex flex-col gap-2 items-center p-2 rounded-md ring-4 ring-stone-100 mb-10">
 
       <p className="text-3xl font-semibold underline decoration-4 decoration-green-400">About Me</p>
 
@@ -65,13 +71,65 @@ const AboutSection = () => (
         Skills
       </p>
 
+      <div className="flex flex-row flex-wrap gap-4">
+        <div className='skill-div'>
+          <FaJava size={'3.0rem'} color='red' />
+          <p>Java</p>
+        </div>
+        <div className='skill-div'>
+          <SiSpring size={'3.0rem'} color='#6db33f' />
+          <p>Spring</p>
+        </div>
+        <div className='skill-div'>
+          <FaNodeJs size={'3.0rem'} color='#80bd00' />
+          <p>NodeJS</p>
+        </div>
+        <div className='skill-div'>
+          <SiJavascript size={'3.0rem'} color='#f7df1d' />
+          <p>JavaScript</p>
+        </div>
+        <div className='skill-div'>
+          <FaReact size={'3.0rem'} color='cyan' />
+          <p>React</p>
+        </div>
+        <div className='skill-div'>
+          <GrMysql size={'3.0rem'} color='#4287f5' />
+          <p>MySQL</p>
+        </div>
+        <div className='skill-div'>
+          <SiPostgresql size={'3.0rem'} color='#42bcf5'/>
+          <p>PostgreSQL</p>
+        </div>
+      </div>
+
   </section>
 );
 
 const ContactSection = () => (
-  <section id="contact">
-    <h3> Contact</h3>
-    <small>Get In Touch</small>
+  <section id="contact"
+    style={{backgroundColor: "var(--white)"}}
+    className="flex flex-col gap-2 items-center p-2 rounded-md ring-4 ring-stone-100 mb-10">
+    <div className='flex flex-col justify-center align-center items-center'>
+      <p className="text-3xl font-semibold">Contact</p> 
+      <p className="text-lg underline decoration-4 decoration-green-400">Get In Touch</p>
+    </div>
+
+    <div className="flex w-full gap-4">
+      <div className="flex flex-col">
+        <div className="flex flex-row items-center gap-2">
+          <FaMapLocationDot size={"2.0rem"} />
+          Salvador, Brazil
+        </div>
+        <div className="flex flex-row items-center gap-2">
+          <MdOutlineEmail size={"2.0rem"} />
+          isaquecopque@gmail.com
+        </div>
+        <div className="flex flex-row items-center gap-2">
+          <MdContactPhone size={"2.0rem"} />
+          (+55) 071 9 9723-6585
+        </div>
+      </div>
+    </div>
   </section>
 );
 function App() {
