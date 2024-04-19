@@ -1,8 +1,11 @@
 import { MdOutlineArticle, MdOutlineEmail, MdContactPhone } from "react-icons/md";
 import { FaGithub, FaJava, FaNodeJs, FaReact, FaLinkedin } from "react-icons/fa";
 import { SiJavascript, SiSpring, SiPostgresql  } from "react-icons/si";
-import { GrMysql } from "react-icons/gr";
+import { AiOutlineSmile } from "react-icons/ai";
+import { GrMysql, GrArticle  } from "react-icons/gr";
+import { BsTelephone } from "react-icons/bs";
 import { FaMapLocationDot } from "react-icons/fa6";
+import { TfiUser } from "react-icons/tfi";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -12,10 +15,10 @@ const Navbar = () => (
     <header id="header" className="flex">
       <nav id="navbar" className='navbar nav-menu my-auto'>
         <ul>
-          <li><a href="#me" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Me</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          <li><a href="#me" className="nav-link scrollto active"><AiOutlineSmile size={"1.8rem"}/> <span>Me</span></a></li>
+          <li><a href="#about" className="nav-link scrollto"><TfiUser size={"1.8rem"} /> <span>About</span></a></li>
+          <li><a href="#resume" className="nav-link scrollto"><GrArticle size={"1.8rem"}/> <span>Resume</span></a></li>
+          <li><a href="#contact" className="nav-link scrollto"><BsTelephone size={"1.8rem"}/> <span>Contact</span></a></li>
         </ul>
       </nav>
     </header>
@@ -23,7 +26,7 @@ const Navbar = () => (
 )
 
 const MainSection = () => (
-  <section id="me" style={{backgroundColor: 'var(--raisin-black)'}} className="text-slate-100 pt-4 pb-6 mb-6">
+  <section id="me" style={{backgroundColor: 'var(--raisin-black)'}} className="text-slate-100 pt-4 pb-6 mb-6 font-caveat">
       <div className='flex flex-col justify-center align-center items-center gap-2'>
 
         <div className="w-32 h-32 flex items-center justify-center rounded-full bg-gray-100">
@@ -119,14 +122,29 @@ const ResumeSection = () => (
             <span className="ml-4 bg-emerald-200">2019 - 2024</span></p>
             <p className="text-base font-medium">Federal University of Bahia</p>
             <p className="text-base text-justify">
-              Bachelor's Thesis: Eventic an Event Recommender System for the Institute of Computing
+              Bachelor's Thesis: EventIC: An Academic Event Recommender System for the Institute of Computing. 
             </p>
           </div>
         </div>
-        <div className="flex justify-center">
-          <p className="text-xl font-semibold">
-            Experience
-          </p>
+
+        <div className="flex flex-col justify-center ml-4 gap-2">
+          <p className="text-2xl font-semibold"> Experience </p>
+          <div>
+            <p className="text-lg font-semibold">Research Intern
+            <span className="ml-4 bg-emerald-200">November 2023 - Present</span></p>
+            <p className="text-base font-medium">Tomorrow - Federal University of Bahia</p>
+            <p className="text-base">
+              Web systems back-end and front-end development with Java Spring and React.
+             Relational data modeling using MySQL.</p>
+          </div>
+          <div>
+            <p className="text-lg font-semibold">Intern Developer
+            <span className="ml-4 bg-emerald-200">September 2022 - November 2023</span></p>
+            <p className="text-base font-medium">IT Superintendence - Federal University of Bahia</p>
+            <p className="text-base">
+            Code debugging and object-oriented programming in Java.
+            Services development with Java Spring framework and PostgreSQL.</p>
+          </div>
         </div>
       </div>
 
@@ -168,7 +186,7 @@ const ContactSection = () => (
 );
 function App() {
   return (
-    <div className="grid grid-cols-9 h-screen" 
+    <div className="grid grid-cols-9" 
     style={{background: "linear-gradient(264deg, rgba(237,237,237,1) 81%, rgba(53,59,77,0.30575980392156865) 100%"}}>
       <div className="col-span-1">
         <Navbar />

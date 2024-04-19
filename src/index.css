@@ -75,6 +75,17 @@
   }
 }
 
+/* Fonts */
+.font-dancing{
+  font-family: "Dancing Script", cursive;
+}
+.font-caveat{
+  font-family: "Caveat", cursive;
+}
+.font-mulish{
+  font-family: "Mulish", sans-serif;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -106,44 +117,6 @@
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
-}
-
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: var(--white);
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid var(--raisin-black);
-  border-top-color: var(--white);
-  border-bottom-color: var(--white);
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1s linear infinite;
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /*--------------------------------------------------------------
@@ -249,8 +222,6 @@
 }
 
 .nav-menu a:hover,
-.nav-menu .active,
-.nav-menu .active:focus,
 .nav-menu li:hover>a {
   color: var(--white);
   background: var(--raisin-black);
