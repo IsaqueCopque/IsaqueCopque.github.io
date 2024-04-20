@@ -9,6 +9,7 @@ import { TfiUser } from "react-icons/tfi";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import CV from './assets/IsaqueCopque.pdf';
 
 const Navbar = () => (
   <>
@@ -26,96 +27,140 @@ const Navbar = () => (
 )
 
 const MainSection = () => (
-  <section id="me" style={{backgroundColor: 'var(--raisin-black)'}} className="text-slate-100 pt-4 pb-6 mb-6 font-caveat">
+  <section id="me" style={{backgroundColor: 'var(--raisin-black)'}} className="pt-4 pb-6 mb-6">
       <div className='flex flex-col justify-center align-center items-center gap-2'>
 
-        <div className="w-32 h-32 flex items-center justify-center rounded-full bg-gray-100">
-          <img className="w-full h-full object-cover rounded-full" 
-            src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" 
-            alt="Imagem de Perfil"/>
-        </div>
+          <img className="w-48 h-48 rounded-full" style={{borderRadius: "50%"}}
+            src="/me.jpg" 
+            alt="Profile"/>
 
-        <div>
+        <div className="text-slate-100 font-caveat">
           <p className="text-5xl">Hi, I'm</p>
-          <p className="text-7xl pl-4"><span className='italic text-green-400'>Isaque Copque!</span></p>
+          <p className="text-7xl pl-4"><span className='text-green-400'>Isaque Copque!</span></p>
         </div>
       </div>
   </section>
 );
 
-const AboutSection = () => (
+const AboutSection = () =>{
+
+ return (
   <section id="about" 
     style={{backgroundColor: "var(--white)"}}
     className="flex flex-col gap-2 items-center p-2 rounded-md ring-4 ring-stone-100 mb-10">
 
-      <p className="text-3xl font-semibold underline decoration-4 decoration-green-400">About Me</p>
+      <p className="text-4xl font-semibold underline decoration-4 decoration-green-400 font-caveat">About Me</p>
 
-      <p className="text-xl text-justify">
-          I'm a computer science student interested in problem-solving.
-          A quick learner, swiftly adaptable to different technologies, seeking an opportunity to join a dynamic development team and contribute to solving challenges.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit in a mass consuming state that cannot be understood by others.
+      <p className="text-xl text-justify ml-2">
+        I'm a Brazilian 22-year-old computer science student currently concluding my bachelor's degree at the
+        Federal University of Bahia. I enjoy problem-solving and venturing into diverse technologies.
+        I consider myself a curious person who likes to try new things and explore different approaches to reach goals. Web systems and recommender systems are the topics that interest me the most.
+      </p>
+      <p className="text-xl text-justify ml-2">
+      In my academic journey, I have had experience in developing software solutions through internships, research projects, 
+      and academic assignments, working with technologies such as Java, Node.js, React, MySQL, and PostgreSQL.
+       I also experienced being a monitor for teaching programming logic in C++ to high school students.
       </p>
 
-      <div className='flex flex-row items-start w-full gap-6 flex-wrap'>
+      <p className="text-3xl font-semibold font-caveat">
+        Skills
+      </p>
+
+      <div className="w-full  flex justify-center">
+      <Slider dots={false} slidesToShow={5} arrows={false} infinite={true} 
+        centerMode={true} centerPadding={'0px'} edgeFriction={0}
+        autoplay={true} autoplaySpeed={2200} responsive={[
+          {breakpoint:950,
+            settings:{slidesToShow: 3, autoplaySpeed: 1500},
+          },
+          {breakpoint:600,
+            settings:{slidesToShow: 2, autoplaySpeed: 900, speed: 1000}
+          }
+        ]}
+        className="w-3/4">
+        <div>
+          <div className='skill-div skill-balloon'>
+            <FaJava size={'3.0rem'} color='red' />
+            <p>Java</p>
+          </div>
+        </div>
+
+        <div>
+          <div className='skill-div skill-balloon'>
+            <SiSpring size={'3.0rem'} color='#6db33f' />
+            <p>Spring</p>
+          </div>
+        </div>
+
+        <div>
+          <div className='skill-div skill-balloon'>
+            <FaNodeJs size={'3.0rem'} color='#80bd00' />
+            <p>NodeJS</p>
+          </div>
+        </div>
+
+        <div>
+          <div className='skill-div skill-balloon'>
+            <SiJavascript size={'3.0rem'} color='#f7df1d' />
+            <p>JavaScript</p>
+          </div>
+        </div>
+
+        <div>
+          <div className='skill-div skill-balloon'>
+            <FaReact size={'3.0rem'} color='cyan' />
+            <p>React</p>
+          </div>
+        </div>
+
+        <div>
+          <div className='skill-div skill-balloon'>
+            <GrMysql size={'3.0rem'} color='#4287f5' />
+            <p>MySQL</p>
+          </div>
+        </div>
+
+        <div>
+          <div className='skill-div skill-balloon'>
+            <SiPostgresql size={'3.0rem'} color='#42bcf5'/>
+            <p>PostgreSQL</p>
+          </div>
+        </div>
+      </Slider>
+      </div>
+
+      <div className='flex flex-row items-start w-full mt-4 gap-6 flex-wrap'>
 
         <a href='https://github.com/IsaqueCopque' target='_blank' rel='noreferrer' className='cv-button'>
           <FaGithub size={'1.4rem'} />
           github.com/IsaqueCopque
         </a>
 
+        <a href={CV} download={"Isaque Copque"} target="_blank" rel="noreferrer">
         <div className='cv-button'>
           <MdOutlineArticle size={'1.4rem'} />
           Check out my CV
         </div>
-      </div>
-
-      <p className="text-2xl font-semibold">
-        Skills
-      </p>
-
-      <div className="flex flex-row flex-wrap gap-4">
-        <div className='skill-div skill-balloon'>
-          <FaJava size={'3.0rem'} color='red' />
-          <p>Java</p>
-        </div>
-        <div className='skill-div skill-balloon'>
-          <SiSpring size={'3.0rem'} color='#6db33f' />
-          <p>Spring</p>
-        </div>
-        <div className='skill-div skill-balloon'>
-          <FaNodeJs size={'3.0rem'} color='#80bd00' />
-          <p>NodeJS</p>
-        </div>
-        <div className='skill-div skill-balloon'>
-          <SiJavascript size={'3.0rem'} color='#f7df1d' />
-          <p>JavaScript</p>
-        </div>
-        <div className='skill-div skill-balloon'>
-          <FaReact size={'3.0rem'} color='cyan' />
-          <p>React</p>
-        </div>
-        <div className='skill-div skill-balloon'>
-          <GrMysql size={'3.0rem'} color='#4287f5' />
-          <p>MySQL</p>
-        </div>
-        <div className='skill-div skill-balloon'>
-          <SiPostgresql size={'3.0rem'} color='#42bcf5'/>
-          <p>PostgreSQL</p>
-        </div>
+        </a>
       </div>
 
   </section>
 );
+}
 
 const ResumeSection = () => (
   <section id="resume" 
     style={{backgroundColor: "var(--white)"}}
     className="flex flex-col gap-2 items-center p-2 rounded-md ring-4 ring-stone-100 mb-10">
 
-      <p className="text-3xl font-semibold underline decoration-4 decoration-green-400">Resume</p>
+      <div className="mb-4">
+        <p className="text-4xl font-semibold font-caveat" 
+        style={{marginBottom:'-5px'}}>Resume</p>
+        <div style={{ borderBottom: '4px solid', borderColor: 'rgb(74 222 128)', marginBottom: '-5px',width: '100%', height:'1px'}}></div>
+      </div>
 
       <div className="grid grid-cols-2 w-full">
-        <div className="flex flex-col border-r-2 border-neutral-500 gap-2">
+        <div className="flex flex-col flex-wrap border-r-2 border-neutral-500 gap-2">
           <p className="text-2xl font-semibold "> Education </p>
           <div className="mr-4">
             <p className="text-lg font-semibold">Computer Science Bachelor's Degree 
@@ -127,7 +172,7 @@ const ResumeSection = () => (
           </div>
         </div>
 
-        <div className="flex flex-col justify-center ml-4 gap-2">
+        <div className="flex flex-col flex-wrap justify-center ml-4 gap-2">
           <p className="text-2xl font-semibold"> Experience </p>
           <div>
             <p className="text-lg font-semibold">Research Intern
@@ -139,7 +184,7 @@ const ResumeSection = () => (
           </div>
           <div>
             <p className="text-lg font-semibold">Intern Developer
-            <span className="ml-4 bg-emerald-200">September 2022 - November 2023</span></p>
+            <span className="ml-4 bg-emerald-200 ">September 2022 - November 2023</span></p>
             <p className="text-base font-medium">IT Superintendence - Federal University of Bahia</p>
             <p className="text-base">
             Code debugging and object-oriented programming in Java.
@@ -156,11 +201,11 @@ const ContactSection = () => (
     style={{backgroundColor: "var(--white)"}}
     className="flex flex-col gap-2 items-center p-2 rounded-md ring-4 ring-stone-100 mb-10">
     <div className='flex flex-col justify-center align-center items-center'>
-      <p className="text-3xl font-semibold">Contact</p> 
-      <p className="text-lg underline decoration-4 decoration-green-400">Get In Touch</p>
+      <p className="text-4xl font-semibold font-caveat">Contact</p> 
+      <p className="text-2xl underline decoration-4 decoration-green-400 font-caveat">Get In Touch</p>
     </div>  
 
-    <div className="flex justify-center w-full gap-4 flex-wrap">
+    <div className="flex justify-center w-full gap-4 flex-wrap font-monteserrat font-medium">
         <div className="flex flex-row items-center gap-2">
           <FaMapLocationDot size={"2.0rem"} className="contact-ballon"/>
           <p className="text-lg">Salvador, Brazil</p>
