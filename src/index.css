@@ -90,6 +90,43 @@
 }
 
 /*--------------------------------------------------------------
+# Resume Section Display
+--------------------------------------------------------------*/
+.resume-container{
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.resume-education-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-right: 2px solid #A0AEC0; 
+  gap: 0.5rem; 
+}
+.resume-experience-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 1rem;
+  gap: 0.5rem; 
+}
+@media (max-width: 500px) {
+  .resume-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  .resume-education-container {
+    border-right: none;
+  }
+  .resume-experience-container {
+    margin-left: 0px;
+  }
+}
+
+/*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {

@@ -158,9 +158,8 @@ const ResumeSection = () => (
         style={{marginBottom:'-5px'}}>Resume</p>
         <div style={{ borderBottom: '4px solid', borderColor: 'rgb(74 222 128)', marginBottom: '-5px',width: '100%', height:'1px'}}></div>
       </div>
-
-      <div className="grid grid-cols-2 w-full">
-        <div className="flex flex-col flex-wrap border-r-2 border-neutral-500 gap-2">
+      <div className="resume-container">
+        <div className="resume-education-container">
           <p className="text-2xl font-semibold "> Education </p>
           <div className="mr-4">
             <p className="text-lg font-semibold">Computer Science Bachelor's Degree 
@@ -172,22 +171,22 @@ const ResumeSection = () => (
           </div>
         </div>
 
-        <div className="flex flex-col flex-wrap justify-center ml-4 gap-2">
+        <div className="resume-experience-container">
           <p className="text-2xl font-semibold"> Experience </p>
           <div>
             <p className="text-lg font-semibold">Research Intern
             <span className="ml-4 bg-emerald-200">November 2023 - Present</span></p>
             <p className="text-base font-medium">Tomorrow - Federal University of Bahia</p>
             <p className="text-base">
-              Web systems back-end and front-end development with Java Spring and React.
-             Relational data modeling using MySQL.</p>
+              Web systems back-end and front-end development with Java Spring and React.<br/>
+              Relational data modeling using MySQL.</p>
           </div>
           <div>
             <p className="text-lg font-semibold">Intern Developer
             <span className="ml-4 bg-emerald-200 ">September 2022 - November 2023</span></p>
             <p className="text-base font-medium">IT Superintendence - Federal University of Bahia</p>
-            <p className="text-base">
-            Code debugging and object-oriented programming in Java.
+            <p className="text-base w-full">
+            Code debugging and object-oriented programming in Java.<br/>
             Services development with Java Spring framework and PostgreSQL.</p>
           </div>
         </div>
