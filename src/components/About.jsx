@@ -1,7 +1,10 @@
-import { FaGithub, FaJava, FaNodeJs, FaReact} from "react-icons/fa";
+import { FaGithub, FaJava, FaNodeJs, FaReact, FaDocker} from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
 import { MdOutlineArticle } from "react-icons/md";
-import { SiJavascript, SiPostgresql, SiSpring, SiFlutter } from "react-icons/si";
+import { SiJavascript, SiPostgresql, SiSpring, SiFlutter, SiOrcid } from "react-icons/si";
+import { BiLogoMongodb } from "react-icons/bi";
+import { TbBrandNextjs } from "react-icons/tb";
+
 import Slider from "react-slick";
 import CV from '../assets/IsaqueCopque.pdf';
 
@@ -25,7 +28,7 @@ const AboutSection = () =>{
       </p>
       <p className="text-xl text-justify ml-2">
       Throughout my professional and academic journey, I have developed software solutions through research projects, internships, and teaching experiences.
-      I have worked with technologies such as <span className="underline decoration-green-500">Java, Node.js, React, Flutter, Python, MySQL, and PostgreSQL</span>. In addition to development, I have teaching experience 
+      I have worked with technologies such as <span className="underline decoration-green-500">Java, Spring, Node.js, JavaScript, React, Next.js, Flutter, Python, MySQL, PostgreSQL, MongoDB, Docker, and GitHub Actions</span>. In addition to development, I have teaching experience 
       as a programming logic monitor in C++ for high school students, as well as an assistant teacher in programming courses.
       </p>
 
@@ -81,6 +84,13 @@ const AboutSection = () =>{
 
         <div>
           <div className='skill-div skill-balloon'>
+            <TbBrandNextjs size={'3.0rem'} color='white' />
+            <p>Next.js</p>
+          </div>
+        </div>
+
+        <div>
+          <div className='skill-div skill-balloon'>
             <FaReact size={'3.0rem'} color='cyan' />
             <p>React</p>
           </div>
@@ -106,6 +116,20 @@ const AboutSection = () =>{
             <p>PostgreSQL</p>
           </div>
         </div>
+
+        <div>
+          <div className='skill-div skill-balloon'>
+            <BiLogoMongodb size={'3.0rem'} color='#53AB4D'/>
+            <p>MongoDB</p>
+          </div>
+        </div>
+
+        <div>
+          <div className='skill-div skill-balloon'>
+            <FaDocker size={'3.0rem'} color='#0092E6'/>
+            <p>Docker</p>
+          </div>
+        </div>
       </Slider>
       </div>
 
@@ -122,6 +146,19 @@ const AboutSection = () =>{
           Check out my CV
         </div>
         </a>
+
+        <a href='https://orcid.org/0009-0001-9633-910X' target='_blank' rel='noreferrer' className='cv-button'>
+          <SiOrcid size={'1.4rem'} />
+          Orcid
+        </a>
+
+        <a href='http://lattes.cnpq.br/8124591580123937' target='_blank' rel='noreferrer' className='cv-button'>
+            <img  style={{borderRadius: "50%",  width: "1.4rem", height: "1.4rem"} }
+            src="/latteslogo.png"  
+            alt="Lattes"/>
+          Lattes
+        </a>
+
       </div>
 
   </section>

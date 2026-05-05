@@ -54,10 +54,10 @@ const ResumeSection = () => {
           <ul className="list-disc ml-4">
             <li className="text-base">
               <span className="font-medium">
-                HESTIA: A Home Environment Simulator Targeting Inhabitant Activities
+                Multi-Label Incremental Learning for State Prediction of Actuator Devices in Smart Homes
               </span>
               <a
-                href="https://doi.org/10.36227/techrxiv.173888093.30111102/v2"
+                href="https://doi.org/10.1109/OJCS.2026.3675959"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ml-2 inline-flex items-center text-emerald-600 hover:underline"
@@ -72,6 +72,20 @@ const ResumeSection = () => {
               </span>
               <a
                 href="https://doi.org/10.29327/1588952.28-12"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-2 inline-flex items-center text-emerald-600 hover:underline"
+                aria-label="View publication"
+              >
+                <FaLink />
+              </a>
+            </li>
+            <li className="text-base">
+              <span className="font-medium">
+                HESTIA: A Home Environment Simulator Targeting Inhabitant Activities
+              </span>
+              <a
+                href="https://doi.org/10.36227/techrxiv.173888093.30111102/v2"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ml-2 inline-flex items-center text-emerald-600 hover:underline"
