@@ -1,6 +1,4 @@
-import { useState } from "react";
-import { AboutSection, BannerSection, Navbar, ResumeSection, ContactSection } from "./components";
-import ChatButton from "./components/chat/ChatButton";
+import { AboutSection, BannerSection, ContactSection, Navbar, ResumeSection } from "./components";
 import Chat from "./components/chat/Chat";
 import ProjectsSection from "./components/Projects";
 
