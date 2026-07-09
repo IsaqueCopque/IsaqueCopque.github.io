@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AboutSection, BannerSection, Navbar, ResumeSection, ContactSection } from "./components";
 import ChatButton from "./components/chat/ChatButton";
 import Chat from "./components/chat/Chat";
+import ProjectsSection from "./components/Projects";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <BannerSection />
         <AboutSection />
         <ResumeSection />
+        <ProjectsSection />
         <ContactSection />
       </div>
     </div>

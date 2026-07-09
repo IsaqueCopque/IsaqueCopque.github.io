@@ -1,12 +1,7 @@
 import { FaLink } from "react-icons/fa";
-const ResumeSection = () => {
+import experiences from "../data/experiences";
 
-  const experiences = [
-    { title: "Developer", period: "April 2025 - Present", company: "IT Superintendence – Federal University of Bahia", bullets: ["Adapted and developed new features for institutional web systems, including data modeling with Java and PostgreSQL, enabling the unification of previously separate systems.", "Identified and fixed functional bugs and performance bottlenecks through code refactoring and algorithm optimization, restoring system functionality and reducing response times."] },
-    { title: "Researcher", period: "November 2024 - 2025", company: "ARGUS", bullets: ["Researched and applied machine learning and recommender system techniques using Python to design models capable of recommending automated actions in smart home environments.", "Integrated the recommendation engine into a mobile smart home application, connecting backend models with the client using Python, Flutter, and MongoDB, enabling in-app delivery of personalized recommendations."] },
-    { title: "Research Intern", period: "November 2023 - 2024", company: "Tomorrow", bullets: ["Led a team of intern developers in the design and implementation of an academic web platform using Java Spring and React, successfully delivering a system to support an ongoing research project.", "Designed the relational data model and migrated academic data from spreadsheets to a MySQL database, resulting in structured, efficient, and scalable data storage."] },
-    { title: "Intern Developer", period: "September 2022 - 2023", company: "IT Superintendence – Federal University of Bahia", bullets: ["Debugged and refactored Java codebases and developed backend services with Java Spring and PostgreSQL, restoring broken functionalities and delivering pending institutional services."] },
-  ];
+const ResumeSection = () => {
 
   const LanguageProficiency = ({name, percent, level}) =>
   <><div className="flex flex-col gap-1 w-auto">

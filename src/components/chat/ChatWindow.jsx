@@ -19,15 +19,15 @@ const ChatWindow = ({ onMessageAdd, messagesList, waitingResponse}) => {
                 rightSide ? "justify-end" : "justify-start"
             }`}>
                 <div className={`max-w-[92%] px-4 py-2 rounded-2xl shadow ${messageColorClass}`}>
-                    {messageText}
+                        {messageText}
                 </div>
             </div>
         );
     }
 
     return (<div
-        className="fixed bottom-24 right-6 w-96 h-[600px] bg-white rounded-xl
-       shadow-2xl border flex flex-col z-50">
+        className="fixed bottom-24 right-4 left-4 lg:left-auto lg:right-6 w-auto lg:w-96 h-[70vh]
+        lg:h-[600px] bg-white rounded-xl shadow-2xl border flex flex-col z-50">
 
         {/* Header */}
         <div className="p-4 border-b font-bold">
@@ -51,7 +51,7 @@ const ChatWindow = ({ onMessageAdd, messagesList, waitingResponse}) => {
                 )
                 :
                 <div className="w-full h-full flex items-center justify-center">
-                    <p className="text-4xl font-semibold text-gray-300 select-none">
+                    <p className="text-2xl md:text-4xl font-semibold text-gray-300 select-none text-center">
                     Send a question
                     </p>
                 </div>
