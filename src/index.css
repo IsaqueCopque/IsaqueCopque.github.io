@@ -10,6 +10,31 @@
   --rasprose: #B74F6F;
 }
 
+.chat_button {
+  position: fixed;
+  bottom: 1.5rem;          
+  right: 1.5rem;           
+  width: 4rem;        
+  height: 4rem;         
+  border-radius: 9999px;
+  color: #f0f4f8;
+  cursor: pointer;
+
+  background-color: var(--raisin-black);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+              0 8px 10px -6px rgb(0 0 0 / 0.1); /* shadow-xl */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+    transition: background-color 0.3s ease;
+  &:hover{
+    background-color:#1f1b1b;
+    color: var(--green);
+  }
+}
+
 .cv-button{
   font-weight: 500;
   color: #f0f4f8;
